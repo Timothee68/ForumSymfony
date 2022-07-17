@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MessageController!{% endblock %}
+
+{% block body %}
+<h1>Page message topic {{ messages.topic }}</h1>
+<div  class="container">
+    <div  class="row row-col-4">
+      <div id="bg-img-left" class="col bg-secondary">
+            <div class="card mt-2 mb-3 fs-4 text" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                      <img class="card-img-top" style="width: 10rem; " src="" alt="" srcset="">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title"><a href="#"><strong> Par : </strong></a></h5>
+                          <hr>
+                          <p class="card-text">""</p>
+                          <hr>
+                          <p class="card-text"><small class="text-muted">Envoyer le : ""</small></p>
+                
+                        <button type="button" class="btn btn-danger"><a href="#"><i class="fa-solid fa-dumpster fs-3 mb-1"></i></a></button>
+                            
+                  </div>
+                      </div>
+                    </div>
+                  </div>
+    </div>
+{% endblock %}

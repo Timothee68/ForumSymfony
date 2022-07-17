@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello TopicController!{% endblock %}
+
+{% block body %}
+<h1>Page topic</h1>
+
+<div class="container">
+    <div class="row">
+        <table id="table_id" class="table table-striped mt-4 display">
+            <thead>
+            <tr class="bg-secondary">
+                <th scope="col ">Catégorie</th>
+                <th scope="col">Topics</th>
+                <th scope="col">Nb Messages</th>
+                <th scope="col">Date de création</th>
+                <th scope="col">Pseudo</th>
+                {# <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col"></th> #}
+            </tr>
+            </thead>
+            <tbody>
+                {% for topic in topics %}
+                <tr>
+                    <td>{{ topic.categorie }}</td>
+                    <td><a href="{{ path('app_message') }}" >  {{ topic.title }}</a></td>
+                    <td> Nb messages : {{ topic.nbMessages }}</td>
+                    <td>{{ topic.dateTopic | date('d/m/Y')}}</td>
+                    <td>{{ topic.userTopic }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+</div>
+</div>
+
+{% endblock %}
